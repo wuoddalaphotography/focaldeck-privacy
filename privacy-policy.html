@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline';">
+  <title>FocalDeck — Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #060911;
+      --card: #0f172a;
+      --border: #1e293b;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      line-height: 1.65;
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 28px;
+    }
+    h1 { margin-top: 0; font-size: 1.9rem; color: var(--text); }
+    h2 { margin-top: 1.75rem; font-size: 1.2rem; color: var(--accent); }
+    h3 { margin-top: 1.2rem; font-size: 1.02rem; color: var(--text); }
+    p, li { color: var(--muted); }
+    code {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    .meta {
+      background: #0b0f19;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>FocalDeck Privacy Policy</h1>
+    <div class="meta">
+      <div><strong>Effective Date:</strong> November 23, 2026</div>
+      <div><strong>Developer:</strong> WuodDala Photography</div>
+      <div><strong>Contact Email:</strong> wuoddalaphotography01@gmail.com</div>
+      <div><strong>Android Package:</strong> <code>com.focaldeck.studio</code></div>
+    </div>
+
+    <h2>1. Overview</h2>
+    <p>
+      FocalDeck ("the App") is a 3D optical simulation, dual-rig lens comparison, and lighting
+      pre-visualization app. Its core 3D studio, optical physics calculations, and local PNG/EXIF
+      exports operate offline on your device without requiring an account.
+    </p>
+
+    <h2>2. Information Processed by the App</h2>
+
+    <h3>A. Camera Permission (<code>android.permission.CAMERA</code>)</h3>
+    <p>
+      Camera access is used only when you open <strong>Scan Scene</strong> or
+      <strong>Scan Gear</strong>. On-device exposure metering runs locally. If you initiate
+      AI Scene Analysis or AI Gear Recognition, the captured image or short clip is sent over
+      encrypted HTTPS to the configured AI backend (or directly to Google's Gemini API when using
+      Bring-Your-Own-Key) solely to return coaching tips or detected equipment details.
+    </p>
+
+    <h3>B. Optional AI Photoreal Previews &amp; Safety Reports</h3>
+    <ul>
+      <li>
+        <strong>Render AI:</strong> When you tap Render AI, the current 3D comparison preview frame
+        and optical rig parameters (focal length, aperture, shutter, ISO, lighting angles) are sent
+        over HTTPS to generate the requested preview image. Cached renders stay in private local
+        storage and can be cleared anytime in <strong>Settings &rarr; Clear AI Render Cache</strong>.
+      </li>
+      <li>
+        <strong>AI Safety Reports:</strong> When you submit a report via
+        <strong>Report AI Generated Image</strong>, your feedback note, render state hash, AI model
+        name, and app version are transmitted over HTTPS to help monitor safety and quality.
+      </li>
+    </ul>
+
+    <h3>C. Bring-Your-Own-Key (BYOK) Credentials</h3>
+    <p>
+      Optional Gemini API keys entered in Settings are encrypted on-device using hardware-backed
+      AES-256-GCM via <code>AndroidKeyStore</code>. They are never sent to FocalDeck servers and
+      are transmitted only directly to <code>generativelanguage.googleapis.com</code> when you run
+      an AI action.
+    </p>
+
+    <h3>D. Device Integrity &amp; Google Play Billing</h3>
+    <ul>
+      <li>
+        <strong>Firebase App Check / Play Integrity:</strong> Used to verify app authenticity and
+        protect cloud AI endpoints from abuse.
+      </li>
+      <li>
+        <strong>Google Play Billing:</strong> Subscriptions (<code>focaldeck_pro_monthly</code>) and
+        credit packs (<code>ai_credits_25</code>) are processed directly by Google Play. FocalDeck
+        never accesses or stores your payment card details.
+      </li>
+    </ul>
+
+    <h3>E. Local Storage &amp; Exports</h3>
+    <p>
+      Your default camera/lens rig, gear inventory, and preferences are stored privately on your
+      device. PNG comparisons are written to <code>Pictures/FocalDeck</code> only when you choose
+      to save or share.
+    </p>
+
+    <h2>3. Data Sharing &amp; Advertising</h2>
+    <p>
+      FocalDeck includes no third-party advertising SDKs, does not sell personal data, and does not
+      build advertising profiles.
+    </p>
+
+    <h2>4. Data Retention &amp; Deletion</h2>
+    <p>
+      FocalDeck requires no account registration. You can clear local caches or stored BYOK keys
+      in Settings or uninstall the App to remove all local data. For inquiries regarding submitted
+      AI safety reports, email <strong>wuoddalaphotography01@gmail.com</strong>.
+    </p>
+
+    <h2>5. Children's Privacy</h2>
+    <p>
+      FocalDeck is intended for a general photography audience and is not directed at children
+      under 13 years of age.
+    </p>
+
+    <h2>6. Updates</h2>
+    <p>
+      Any updates to this Privacy Policy will be published on this page with a revised effective date.
+    </p>
+  </main>
+</body>
+</html>
